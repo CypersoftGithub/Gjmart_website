@@ -149,7 +149,7 @@
         (n.dragHandler = i.proxy(n.dragHandler, n)),
         (n.keyHandler = i.proxy(n.keyHandler, n)),
         (n.instanceUid = e++),
-        (n.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/),
+        (nExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/),
         n.registerBreakpoints(),
         n.init(!0);
     };
@@ -308,9 +308,9 @@
             e.$nextArrow
               .removeClass("slick-hidden")
               .removeAttr("aria-hidden tabindex"),
-            e.htmlExpr.test(e.options.prevArrow) &&
+            eExpr.test(e.options.prevArrow) &&
               e.$prevArrow.prependTo(e.options.appendArrows),
-            e.htmlExpr.test(e.options.nextArrow) &&
+            eExpr.test(e.options.nextArrow) &&
               e.$nextArrow.appendTo(e.options.appendArrows),
             !0 !== e.options.infinite &&
               e.$prevArrow
@@ -589,14 +589,14 @@
             .removeClass("slick-disabled slick-arrow slick-hidden")
             .removeAttr("aria-hidden aria-disabled tabindex")
             .css("display", ""),
-          t.htmlExpr.test(t.options.prevArrow) && t.$prevArrow.remove()),
+          tExpr.test(t.options.prevArrow) && t.$prevArrow.remove()),
         t.$nextArrow &&
           t.$nextArrow.length &&
           (t.$nextArrow
             .removeClass("slick-disabled slick-arrow slick-hidden")
             .removeAttr("aria-hidden aria-disabled tabindex")
             .css("display", ""),
-          t.htmlExpr.test(t.options.nextArrow) && t.$nextArrow.remove()),
+          tExpr.test(t.options.nextArrow) && t.$nextArrow.remove()),
         t.$slides &&
           (t.$slides
             .removeClass(
@@ -1866,10 +1866,10 @@
       i(".slick-cloned", e.$slider).remove(),
         e.$dots && e.$dots.remove(),
         e.$prevArrow &&
-          e.htmlExpr.test(e.options.prevArrow) &&
+          eExpr.test(e.options.prevArrow) &&
           e.$prevArrow.remove(),
         e.$nextArrow &&
-          e.htmlExpr.test(e.options.nextArrow) &&
+          eExpr.test(e.options.nextArrow) &&
           e.$nextArrow.remove(),
         e.$slides
           .removeClass("slick-slide slick-active slick-visible slick-current")

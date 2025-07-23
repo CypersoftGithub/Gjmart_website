@@ -278,7 +278,7 @@
     var $this = $(this),
       finalDate = $(this).data("countdown");
     $this.countdown(finalDate, function (event) {
-      $(this).html(
+      $(this)(
         event.strftime(
           "" +
             '<span class="countdown-section"><span class="countdown-amount hover-up">%D</span><span class="countdown-period"> days </span></span>' +
