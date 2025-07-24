@@ -362,7 +362,7 @@
       });
     var n = t.console;
     return (
-      (iInit = function (e, o) {
+      (i.htmlInit = function (e, o) {
         i.docReady(function () {
           var s = i.toDashed(o),
             r = "data-" + s,
@@ -1115,7 +1115,7 @@
           (i.namespace = t),
           (i.data = s.data),
           (i.Item = r(o)),
-          nInit(i, t),
+          n.htmlInit(i, t),
           h && h.bridget && h.bridget(t, i),
           i
         );

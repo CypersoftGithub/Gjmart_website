@@ -27,7 +27,7 @@
           : l("<a/>", { id: p.scrollName, href: "#top" })),
         p.scrollTitle && d.attr("title", p.scrollTitle),
         d.appendTo("body"),
-        p.scrollImg || p.scrollTrigger || d(p.scrollText),
+        p.scrollImg || p.scrollTrigger || d.html(p.scrollText),
         d.css({ display: "none", position: "fixed", zIndex: p.zIndex }),
         p.activeOverlay &&
           l("<div/>", { id: p.scrollName + "-active" })
